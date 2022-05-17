@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\CustomerOrder;
 use App\Models\FoodDelivery;
 use Illuminate\Http\Request;
 
@@ -17,9 +16,9 @@ class FoodDeliveryController extends Controller
     public function index()
     {
         $foodDeliveries = FoodDelivery::with('customerOrder')
-                            ->paginate(2);
-        // return $foodDeliveries;
+            ->paginate(2);
 
+        return $foodDeliveries;
         return view('admin.food_del.index', compact('foodDeliveries'));
     }
 
@@ -30,7 +29,7 @@ class FoodDeliveryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.food_del.index');
     }
 
     /**
@@ -47,10 +46,10 @@ class FoodDeliveryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CustomerOrder  $customerOrder
+     * @param  \App\Models\FoodDelivery  $foodDelivery
      * @return \Illuminate\Http\Response
      */
-    public function show(CustomerOrder $customerOrder)
+    public function show(FoodDelivery $foodDelivery)
     {
         //
     }
@@ -58,22 +57,22 @@ class FoodDeliveryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CustomerOrder  $customerOrder
+     * @param  \App\Models\FoodDelivery  $foodDelivery
      * @return \Illuminate\Http\Response
      */
-    public function edit(CustomerOrder $customerOrder)
+    public function edit(FoodDelivery $foodDelivery)
     {
-        //
+        return view('admin.food_del.edit', compact('foodDelivery'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CustomerOrder  $customerOrder
+     * @param  \App\Models\FoodDelivery  $foodDelivery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CustomerOrder $customerOrder)
+    public function update(Request $request, FoodDelivery $foodDelivery)
     {
         //
     }
@@ -81,11 +80,15 @@ class FoodDeliveryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CustomerOrder  $customerOrder
+     * @param  \App\Models\FoodDelivery  $foodDelivery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CustomerOrder $customerOrder)
+    public function destroy(FoodDelivery $foodDelivery)
     {
-        //
+        $foodDelivery->delete();
+
+        return redirect()
+            ->route('food-delivery.index')
+            ->with('message', 'Food Delivery cancelled ');
     }
 }

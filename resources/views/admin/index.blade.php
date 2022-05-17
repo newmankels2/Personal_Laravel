@@ -11,7 +11,7 @@
                     
                     <h1 class="text-2xl font-semibold whitespace-nowrap">
                         <a href="/admin-dashboard"
-                            class="page-scroll">
+                            class="px-4 py-2 bg-blue-300 rounded-md hover:shadow-lg hover:text-white hover:transition-all">
                             Dashboard
                         </a>
                     </h1>

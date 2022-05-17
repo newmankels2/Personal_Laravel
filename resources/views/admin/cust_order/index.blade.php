@@ -2,16 +2,16 @@
 
 @section('content')
     <div>
+
         <div class="flex flex-col flex-1 h-full overflow-hidden">
             <!-- Main content -->
             <main class="flex-1 max-h-full p-5 overflow-hidden overflow-y-scroll">
                 <!-- Main content header -->
                 <div
                     class="flex flex-col items-start justify-start gap-4 pb-6 space-y-4 border-b lg:items-center lg:space-y-0 lg:flex-row">
-                    
+
                     <h1 class="text-2xl font-semibold whitespace-nowrap">
-                        <a href="/admin-dashboard"
-                            class="page-scroll">
+                        <a href="/admin-dashboard" class="page-scroll">
                             Dashboard
                         </a>
                     </h1>
@@ -49,9 +49,8 @@
 
                 <div>
                     <h3 class="mt-6 text-xl">All Customer Order</h3>
-                    <a 
-                    class="px-4 py-2 bg-blue-500 rounded-md mt-4 inline-block"
-                    href="{{ route('customer-order.create') }}">
+                    <a class="px-4 py-2 bg-blue-500 rounded-md mt-4 inline-block"
+                        href="{{ route('customer-order.create') }}">
                         Create Customer Order
                     </a>
                 </div>
@@ -116,11 +115,12 @@
                                                 </td>
 
                                                 <td class="px-6 py-4 text-sm font-medium text-gray-900">
-                                                    <a href="#"
+                                                    <a href="{{ route('customer-order.edit', $customerOrder) }}"
                                                         class="text-indigo-600 hover:text-white px-4 py-1 hover:bg-green-400 transition-all rounded-3xl">
                                                         Edit
                                                     </a>
-                                                    <form action="" method="post" class="inline">
+                                                    <form action="{{ route('customer-order.destroy', $customerOrder) }}"
+                                                        method="post" class="inline">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="button" class="text-red-600">
@@ -136,10 +136,12 @@
                                 </table>
                                 {{ $customerOrders->links() }}
                             </div>
+
                         </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
 @endsection

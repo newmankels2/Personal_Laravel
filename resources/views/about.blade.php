@@ -1,23 +1,24 @@
 @extends('layouts.app')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <title>CAMI'S PLACE OF ATHENTICITY - Food Website Template</title>
+        <title>CAMI'S PLACE OF ATHENTICITY GRILL & BAR- Food Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
 
-        
-     
+
+
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
-        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet">
+
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -40,22 +41,21 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                     <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto">
                         <a href="home" class="nav-item nav-link">Home</a>
+                        <a href="feature" class="nav-item nav-link">Featured</a>
                         <a href="about" class="nav-item nav-link active">About</a>
-                        <a href="feature" class="nav-item nav-link">Feature</a>
-                        <a href="chef" class="nav-item nav-link">Chef</a>
-                        <a href="menu" class="nav-item nav-link">Menu</a>
-                        <a href="booking" class="nav-item nav-link">Booking</a>
                         <a href="contact" class="nav-item nav-link">Contact</a>
-                        {{-- <a href="contact" class="nav-item nav-link"><admin-dashboard></admin-dashboard></a> --}}
+                        <a href="menu" class="nav-item nav-link">Menu</a>
+                        <a href="chef" class="nav-item nav-link">Chef</a>
+                        <a href="booking" class="nav-item nav-link">Booking</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Nav Bar End -->
-        
-        
+
+
         <!-- Page Header Start -->
         <div class="page-header mb-0">
             <div class="container">
@@ -71,8 +71,8 @@
             </div>
         </div>
         <!-- Page Header End -->
-        
-        
+
+
         <!-- Food Start -->
         <div class="food mt-0">
             <div class="container">
@@ -82,7 +82,7 @@
                             <i class="flaticon-burger"></i>
                             <h2>authenticity</h2>
                             <p>
-                                . 
+                                .
                             </p>
                             <a href="">View Menu</a>
                         </div>
@@ -92,7 +92,7 @@
                             <i class="flaticon-snack"></i>
                             <h2>Snacks</h2>
                             <p>
-                                
+
                             </p>
                             <a href="">View Menu</a>
                         </div>
@@ -102,7 +102,7 @@
                             <i class="flaticon-cocktail"></i>
                             <h2>Beverages</h2>
                             <p>
-                                
+
                             </p>
                             <a href="">View Menu</a>
                         </div>
@@ -111,7 +111,7 @@
             </div>
         </div>
         <!-- Food End -->
-        
+
 
         <!-- About Start -->
         <div class="about">
@@ -119,8 +119,12 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/boa5tKIhb_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/boa5tKIhb_E" data-target="#videoModal">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/boa5tKIhb_E"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button type="button" class="btn-play" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/boa5tKIhb_E" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -133,12 +137,12 @@
                             </div>
                             <div class="about-text">
                                 <H1>
-                                     our authentic cuisines are signatures taste all around the globe.
-                                </p>
-                                <p>
+                                    our authentic cuisines are signatures taste all around the globe.
+                                    </p>
+                                    <p>
                                     <h1>we specialize in catering for your most exoctic taste</H1>
-                                </p>
-                                <a class="btn custom-btn" href="booking">Book A Table</a>
+                                    </p>
+                                    <a class="btn custom-btn" href="booking">Book A Table</a>
                             </div>
                         </div>
                     </div>
@@ -146,24 +150,26 @@
             </div>
         </div>
         <!-- About End -->
-        
-        
+
+
         <!-- Video Modal Start-->
-        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                        </button>        
+                        </button>
                         <!-- 16:9 aspect ratio -->
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                                allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Video Modal End -->
 
 
@@ -226,20 +232,21 @@
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
         <!-- JavaScript Libraries --
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/tempusdominus/js/moment.min.js"></script>
-        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        
-        <!-- Contact Javascript File -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/tempusdominus/js/moment.min.js"></script>
+            <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+            <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+            
+            <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
-</html>
+
+    </html>
 @endsection

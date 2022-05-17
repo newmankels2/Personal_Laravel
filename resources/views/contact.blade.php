@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>CAMI'S PLACE AUTHENTICITY- Food Website Template</title>
+        <title>CAMI'S PLACE AUTHENTICITY GRILL AND BAR- Food Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -39,12 +39,12 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="home" class="nav-item nav-link">Home</a>
+                        <a href="feature" class="nav-item nav-link">Featured</a>
                         <a href="about" class="nav-item nav-link">About</a>
-                        <a href="feature" class="nav-item nav-link">Feature</a>
-                        <a href="chef" class="nav-item nav-link">Chef</a>
+                        <a href="contact" class="nav-item nav-link active">Contact</a>
                         <a href="menu" class="nav-item nav-link">Menu</a>
+                        <a href="chef" class="nav-item nav-link">Chef</a>
                         <a href="booking" class="nav-item nav-link">Booking</a>
-                        <a href="contact" class="nav-item nav-link active"></Contact-admin></a>
                     </div>
                 </div>
             </div>

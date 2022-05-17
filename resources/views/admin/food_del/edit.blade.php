@@ -7,7 +7,7 @@
 
             @csrf
 
-            <h1>Fill Out Food Delivery Form</h1>
+            <h1>Edit food Delivery Form</h1>
 
             <div class="grid gap-6 mb-6 lg:grid-cols-2">
                 <div>
@@ -52,7 +52,8 @@
                         Delivery Address
                     </label>
                     <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="delivery_address" cols="30" rows="10" placeholder="delivery_address">
+                        name="delivery_address" cols="30" rows="10">
+                        {{ $foodDelivery->delivery_address }}
                 </textarea>
                     @error('delivery_address')
                         <div class="text-red-600">{{ $message }}</div>
@@ -62,7 +63,7 @@
 
             <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Create
+                Update
             </button>
         </form>
 

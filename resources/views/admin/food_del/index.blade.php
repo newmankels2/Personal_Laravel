@@ -17,17 +17,14 @@
                     </h1>
                     <h1 class="text-2xl font-semibold whitespace-nowrap">
                         <a href="{{ route('customer-order.index') }}"
-                            class="page-scroll {{ request()->is('customer-order.index') ? 'text-blue-600 font-semibold' : '' }}">
+                        class="px-4 py-2 bg-blue-300 rounded-md hover:shadow-lg hover:text-white hover:transition-all">
                             Customer Order
                         </a>
                     </h1>
                     <h1 class="text-2xl font-semibold whitespace-nowrap">
                         <a href="{{ route('food-delivery.index') }}"
-                            class="page-scroll {{ request()->is('food-delivery.index') ? 'text-blue-600 font-semibold' : '' }}">
-                           <div class="item"> Food Delivery</ {
-                               
-                        }
-                    </div>
+                            class="px-4 py-2 bg-blue-300 rounded-md hover:shadow-lg hover:text-white hover:transition-all">
+                           Food Delivery
                         </a>
                     </h1>
                     <div class="space-y-6 md:space-x-2 md:space-y-0"></div>
@@ -89,6 +86,7 @@
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
+                                        
                                         @foreach ($foodDeliveries as $foodDelivery)
                                             <tr class="transition-all hover:bg-gray-100 hover:shadow-lg">
                                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -119,11 +117,11 @@
                                                 </td>
 
                                                 <td class="px-6 py-4 text-sm font-medium text-gray-900">
-                                                    <a href="#"
+                                                    <a href="{{ route('food-delivery.edit', $foodDelivery) }}"
                                                         class="text-indigo-600 hover:text-white px-4 py-1 hover:bg-green-400 transition-all rounded-3xl">
                                                         Edit
                                                     </a>
-                                                    <form action="" method="post" class="inline">
+                                                    <form action="{{ route('food-delivery.destroy', $foodDelivery) }}" method="post" class="inline">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="button" class="text-red-600">

@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>CAMI'S PLACE AUTHENTICITY - Food Website Template</title>
+        <title>CAMI'S PLACE AUTHENTICITY GRILL AND BAR - Food Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -28,6 +28,7 @@
     </head>
 
     <body>
+        
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
@@ -39,12 +40,12 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="home" class="nav-item nav-link">Home</a>
+                        <a href="feature" class="nav-item nav-link">Featured</a>
                         <a href="about" class="nav-item nav-link">About</a>
-                        <a href="feature" class="nav-item nav-link">Feature</a>
-                        <a href="chef" class="nav-item nav-link">Chef</a>
-                        <a href="menu" class="nav-item nav-link active">Menu</a>
-                        <a href="booking" class="nav-item nav-link">Booking </a>
                         <a href="contact" class="nav-item nav-link">Contact</a>
+                        <a href="menu" class="nav-item nav-link active">Menu</a>
+                        <a href="chef" class="nav-item nav-link">Chef</a>
+                        <a href="booking" class="nav-item nav-link">Booking</a>
                     </div>
                 </div>
             </div>
@@ -113,8 +114,38 @@
         <div class="menu">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Food Menu</p>
-                    <h2>Delicious Food Menu</h2>
+                    <style>
+                        body {
+                          background-color: black;
+                          font-family: cursive;
+                        }
+                        
+                        .glow {
+                          font-size: 80px;
+                          color: #fff;
+                          text-align: center;
+                          animation: glow 1s ease-in-out infinite alternate;
+                        }
+                        
+                        @-webkit-keyframes glow {
+                          from {
+                            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a1e600, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                          }
+                          
+                          to {
+                            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da668, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                          }
+                        }
+                        </style>
+                        </head>
+                        <body>
+                        
+                        <h1 class="glow">DELICIOUS FOOD MENU</h1>
+                             
+                        </body>
+                        </html> 
+                        
+                    
                 </div>
                 <div class="menu-tab">
                     <ul class="nav nav-pills justify-content-center">

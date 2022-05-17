@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\CustomerOrder;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class CustomerOrderController extends Controller
 {
@@ -15,7 +17,9 @@ class CustomerOrderController extends Controller
      */
     public function index()
     {
-        $customerOrders = CustomerOrder::paginate(2);
+        $customerOrders = CustomerOrder::query()
+            ->latest()
+            ->paginate(5);
 
         return view('admin.cust_order.index', compact('customerOrders'));
     }
@@ -38,8 +42,6 @@ class CustomerOrderController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request;
-
         $request->validate([
             'cust_first_name' => 'required',
             'cust_last_name' => 'required',
@@ -48,14 +50,16 @@ class CustomerOrderController extends Controller
             'customer_email' => 'required'
         ]);
         // return $request;
-        
+
         $cusOrders = new CustomerOrder();
         $cusOrders->cust_first_name = $request->cust_first_name;
         $cusOrders->cust_last_name = $request->cust_last_name;
-        $cusOrders->cust_address = $request->cust_address_name;
-        $cusOrders->cust_contact_phone = $request->cust_contact_phone_name;
-        $cusOrders->cust_customer_email = $request->cust_contact_phone_name;
-        $custOrders->save();
+        $cusOrders->address = $request->address;
+        $cusOrders->contact_phone = $request->contact_phone;
+        $cusOrders->customer_email = $request->customer_email;
+        $cusOrders->save();
+
+        Alert::success('Success', 'Customer order created succesfully');
 
         return redirect()->route('customer-order.index')->with('message', 'Customer details recorded');
     }
@@ -79,7 +83,7 @@ class CustomerOrderController extends Controller
      */
     public function edit(CustomerOrder $customerOrder)
     {
-        //
+        return view('admin.cust_order.edit', compact('customerOrder'));
     }
 
     /**
@@ -91,7 +95,18 @@ class CustomerOrderController extends Controller
      */
     public function update(Request $request, CustomerOrder $customerOrder)
     {
-        //
+        $request->validate([
+            'cust_first_name' => 'required',
+            'cust_last_name' => 'required',
+            'address' => 'required',
+            'contact_phone' => 'required',
+            'customer_email' => 'required'
+        ]);
+        // return $request;
+
+        $customerOrder->update($request->all());
+
+        return redirect()->route('customer-order.index')->with('message', 'Customer details recorded');
     }
 
     /**
@@ -103,6 +118,8 @@ class CustomerOrderController extends Controller
     public function destroy(CustomerOrder $customerOrder)
     {
         $customerOrder->delete();
-        // return 
+        return redirect()
+            ->route('customer-order.index')
+            ->with('message', 'Customer Order delted successfully');
     }
 }

@@ -28,43 +28,45 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- //route::get('/login',[login::class,'function']);
-   // return view('login');
+//route::get('/login',[login::class,'function']);
+// return view('login');
 
-route::get('/home', function () {
-   return view("home");
+Route::middleware('auth')->group(function () {
+    route::get('/home', function () {
+        return view("home");
+    });
+
+    route::get('/about', function () {
+        return view("about");
+    });
+
+    route::get('/feature', function () {
+        return view("feature");
+    });
+
+    route::get('/booking', function () {
+        return view("booking");
+        redirect('admin /');
+    });
+
+    route::get('/contact', function () {
+        return view("contact");
+    });
+
+    route::get('/menu', function () {
+        return view("menu");
+    });
+
+    route::get('/single', function () {
+        return view("single");
+    });
+
+    route::get('/chef', function () {
+        return view("chef");
+    });
+
+    Route::post('/booking', [BookingController::class, 'saveBookings']);
 });
-
-route::get('/about', function () {
-    return view("about");
-});
-
-route::get('/feature', function () {
-    return view("feature");
-});
-
-route::get('/booking' , function () {
-    return view("booking");
-    redirect('admin /');
-});
-
-route::get('/contact', function () {
-    return view("contact");
-});
-
-route::get('/menu', function () {
-    return view("menu");
-});
-
-route::get('/single', function () {
-    return view("single");
-});
-
-route::get('/chef', function () {
-    return view("chef");
-});
-
-Route::post('/booking', [BookingController::class, 'saveBookings']);
 
 // Route::get('/header',[header::class, 'function']);
 //     return view('header');
