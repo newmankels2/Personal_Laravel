@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\BookingController;
 use App\Http\Controllers\API\DeliveryController;
 use App\Http\Controllers\API\OrderController;
 use Illuminate\Http\Request;
@@ -23,3 +24,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('deliveries', DeliveryController::class);
 Route::apiResource('orders', OrderController::class);
+
+Route::apiResource('bookings', BookingController::class);
