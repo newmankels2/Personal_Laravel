@@ -21,6 +21,7 @@ class CustomerOrder extends Model
     ];
 
     public function menus(): HasMany
+    
     {
         return $this->hasMany(Menu::class, 'customer_order_id', 'id');
     }
@@ -33,4 +34,5 @@ class CustomerOrder extends Model
 
     
 
+    
 }

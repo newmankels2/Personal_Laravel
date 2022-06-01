@@ -80,11 +80,11 @@
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-burger"></i>
-                            <h2>authenticity</h2>
+                            <a href="img src="breakfast" alt="breakfast"></h2>
                             <p>
                                 .
                             </p>
-                            <a href="">View Menu</a>
+                    
                         </div>
                     </div>
                     <div class="col-md-4">

@@ -80,4 +80,9 @@ Route::middleware(['adminProtectedPage', 'auth'])->prefix('admin-dashboard')->gr
 
     // Food Delivery
     Route::resource('food-delivery', FoodDeliveryController::class);
+
+});
+
+Route::get('breakfast/',function() {
+    return view('breakfast');
 });
